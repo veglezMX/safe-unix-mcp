@@ -1,0 +1,306 @@
+{
+  "$schema": "https://charm.land/crush.json",
+  "providers": {
+    "openai": {
+      "name": "OpenAI",
+      "type": "openai",
+      "models": [
+        {
+          "name": "gpt-4o",
+          "id": "gpt-4o",
+          "default_max_tokens": 4096,
+          "cost_per_1m_in": 2.50,
+          "cost_per_1m_out": 10.00,
+          "cost_per_1m_in_cached": 1.25,
+          "cost_per_1m_out_cached": 10.00,
+          "context_window": 128000,
+          "can_reason": false,
+          "has_reasoning_efforts": false,
+          "supports_attachments": true
+        },
+        {
+          "name": "gpt-5",
+          "id": "gpt-5",
+          "default_max_tokens": 4096,
+          "cost_per_1m_in": 5.00,
+          "cost_per_1m_out": 15.00,
+          "cost_per_1m_in_cached": 2.50,
+          "cost_per_1m_out_cached": 15.00,
+          "context_window": 200000,
+          "can_reason": true,
+          "has_reasoning_efforts": false,
+          "supports_attachments": true
+        },
+        {
+          "name": "gpt-5-mini",
+          "id": "gpt-5-mini",
+          "default_max_tokens": 4096,
+          "cost_per_1m_in": 0.15,
+          "cost_per_1m_out": 0.60,
+          "cost_per_1m_in_cached": 0.075,
+          "cost_per_1m_out_cached": 0.60,
+          "context_window": 128000,
+          "can_reason": false,
+          "has_reasoning_efforts": false,
+          "supports_attachments": true
+        },
+        {
+          "name": "gpt-5-nano",
+          "id": "gpt-5-nano",
+          "default_max_tokens": 4096,
+          "cost_per_1m_in": 0.10,
+          "cost_per_1m_out": 0.40,
+          "cost_per_1m_in_cached": 0.05,
+          "cost_per_1m_out_cached": 0.40,
+          "context_window": 128000,
+          "can_reason": false,
+          "has_reasoning_efforts": false,
+          "supports_attachments": true
+        },
+        {
+          "name": "gpt-4.1",
+          "id": "gpt-4.1",
+          "default_max_tokens": 4096,
+          "cost_per_1m_in": 3.00,
+          "cost_per_1m_out": 12.00,
+          "cost_per_1m_in_cached": 1.50,
+          "cost_per_1m_out_cached": 12.00,
+          "context_window": 128000,
+          "can_reason": false,
+          "has_reasoning_efforts": false,
+          "supports_attachments": true
+        },
+        {
+          "name": "gpt-4.1-mini",
+          "id": "gpt-4.1-mini",
+          "default_max_tokens": 4096,
+          "cost_per_1m_in": 0.15,
+          "cost_per_1m_out": 0.60,
+          "cost_per_1m_in_cached": 0.075,
+          "cost_per_1m_out_cached": 0.60,
+          "context_window": 128000,
+          "can_reason": false,
+          "has_reasoning_efforts": false,
+          "supports_attachments": true
+        },
+        {
+          "name": "gpt-4.1-nano",
+          "id": "gpt-4.1-nano",
+          "default_max_tokens": 4096,
+          "cost_per_1m_in": 0.10,
+          "cost_per_1m_out": 0.40,
+          "cost_per_1m_in_cached": 0.05,
+          "cost_per_1m_out_cached": 0.40,
+          "context_window": 128000,
+          "can_reason": false,
+          "has_reasoning_efforts": false,
+          "supports_attachments": true
+        }
+      ]
+    },
+    "anthropic": {
+      "name": "Anthropic",
+      "type": "anthropic",
+      "models": [
+        {
+          "name": "claude-sonnet-4.5",
+          "id": "claude-sonnet-4.5",
+          "default_max_tokens": 8192,
+          "cost_per_1m_in": 3.00,
+          "cost_per_1m_out": 15.00,
+          "cost_per_1m_in_cached": 0.30,
+          "cost_per_1m_out_cached": 15.00,
+          "context_window": 200000,
+          "can_reason": false,
+          "has_reasoning_efforts": false,
+          "supports_attachments": true
+        },
+        {
+          "name": "claude-haiku-4.5",
+          "id": "claude-haiku-4.5",
+          "default_max_tokens": 8192,
+          "cost_per_1m_in": 1.00,
+          "cost_per_1m_out": 5.00,
+          "cost_per_1m_in_cached": 0.10,
+          "cost_per_1m_out_cached": 5.00,
+          "context_window": 200000,
+          "can_reason": false,
+          "has_reasoning_efforts": false,
+          "supports_attachments": true
+        }
+      ]
+    },
+    "ollama": {
+      "name": "Ollama Local",
+      "type": "openai",
+      "base_url": "http://${WIN_IP}:11434/v1",
+      "models": [
+        {
+          "name": "gpt-oss:20b-cloud",
+          "id": "gpt-oss:20b-cloud",
+          "default_max_tokens": 4096,
+          "cost_per_1m_in": 0,
+          "cost_per_1m_out": 0,
+          "cost_per_1m_in_cached": 0,
+          "cost_per_1m_out_cached": 0,
+          "context_window": 8192,
+          "can_reason": false,
+          "has_reasoning_efforts": false,
+          "supports_attachments": false
+        },
+        {
+          "name": "gpt-oss:120b-cloud",
+          "id": "gpt-oss:120b-cloud",
+          "default_max_tokens": 4096,
+          "cost_per_1m_in": 0,
+          "cost_per_1m_out": 0,
+          "cost_per_1m_in_cached": 0,
+          "cost_per_1m_out_cached": 0,
+          "context_window": 8192,
+          "can_reason": false,
+          "has_reasoning_efforts": false,
+          "supports_attachments": false
+        },
+        {
+          "name": "gpt-oss:20b",
+          "id": "gpt-oss:20b",
+          "default_max_tokens": 4096,
+          "cost_per_1m_in": 0,
+          "cost_per_1m_out": 0,
+          "cost_per_1m_in_cached": 0,
+          "cost_per_1m_out_cached": 0,
+          "context_window": 8192,
+          "can_reason": false,
+          "has_reasoning_efforts": false,
+          "supports_attachments": false
+        },
+        {
+          "name": "gemma3n:e4b-it-fp16",
+          "id": "gemma3n:e4b-it-fp16",
+          "default_max_tokens": 4096,
+          "cost_per_1m_in": 0,
+          "cost_per_1m_out": 0,
+          "cost_per_1m_in_cached": 0,
+          "cost_per_1m_out_cached": 0,
+          "context_window": 8192,
+          "can_reason": false,
+          "has_reasoning_efforts": false,
+          "supports_attachments": false
+        },
+        {
+          "name": "gemma3:12b",
+          "id": "gemma3:12b",
+          "default_max_tokens": 4096,
+          "cost_per_1m_in": 0,
+          "cost_per_1m_out": 0,
+          "cost_per_1m_in_cached": 0,
+          "cost_per_1m_out_cached": 0,
+          "context_window": 8192,
+          "can_reason": false,
+          "has_reasoning_efforts": false,
+          "supports_attachments": false
+        },
+        {
+          "name": "gemma3:4b",
+          "id": "gemma3:4b",
+          "default_max_tokens": 4096,
+          "cost_per_1m_in": 0,
+          "cost_per_1m_out": 0,
+          "cost_per_1m_in_cached": 0,
+          "cost_per_1m_out_cached": 0,
+          "context_window": 8192,
+          "can_reason": false,
+          "has_reasoning_efforts": false,
+          "supports_attachments": false
+        },
+        {
+          "name": "phi4:latest",
+          "id": "phi4:latest",
+          "default_max_tokens": 4096,
+          "cost_per_1m_in": 0,
+          "cost_per_1m_out": 0,
+          "cost_per_1m_in_cached": 0,
+          "cost_per_1m_out_cached": 0,
+          "context_window": 8192,
+          "can_reason": false,
+          "has_reasoning_efforts": false,
+          "supports_attachments": false
+        },
+        {
+          "name": "deepseek-r1:1.5b",
+          "id": "deepseek-r1:1.5b",
+          "default_max_tokens": 4096,
+          "can_reason": true,
+          "cost_per_1m_in": 0,
+          "cost_per_1m_out": 0,
+          "cost_per_1m_in_cached": 0,
+          "cost_per_1m_out_cached": 0,
+          "context_window": 8192,
+          "has_reasoning_efforts": false,
+          "supports_attachments": false
+        },
+        {
+          "name": "deepseek-r1:8b",
+          "id": "deepseek-r1:8b",
+          "default_max_tokens": 4096,
+          "can_reason": true,
+          "cost_per_1m_in": 0,
+          "cost_per_1m_out": 0,
+          "cost_per_1m_in_cached": 0,
+          "cost_per_1m_out_cached": 0,
+          "context_window": 8192,
+          "has_reasoning_efforts": false,
+          "supports_attachments": false
+        },
+        {
+          "name": "deepseek-r1:14b",
+          "id": "deepseek-r1:14b",
+          "default_max_tokens": 4096,
+          "can_reason": true,
+          "cost_per_1m_in": 0,
+          "cost_per_1m_out": 0,
+          "cost_per_1m_in_cached": 0,
+          "cost_per_1m_out_cached": 0,
+          "context_window": 8192,
+          "has_reasoning_efforts": false,
+          "supports_attachments": false
+        },
+        {
+          "name": "deepseek-r1:8b-0528-qwen3-q8_0",
+          "id": "deepseek-r1:8b-0528-qwen3-q8_0",
+          "default_max_tokens": 4096,
+          "can_reason": true,
+          "cost_per_1m_in": 0,
+          "cost_per_1m_out": 0,
+          "cost_per_1m_in_cached": 0,
+          "cost_per_1m_out_cached": 0,
+          "context_window": 8192,
+          "has_reasoning_efforts": false,
+          "supports_attachments": false
+        },
+        {
+          "name": "llama3.2:latest",
+          "id": "llama3.2:latest",
+          "default_max_tokens": 4096,
+          "cost_per_1m_in": 0,
+          "cost_per_1m_out": 0,
+          "cost_per_1m_in_cached": 0,
+          "cost_per_1m_out_cached": 0,
+          "context_window": 8192,
+          "can_reason": false,
+          "has_reasoning_efforts": false,
+          "supports_attachments": false
+        }
+      ]
+    }
+  },
+  "mcpServers": {
+    "safe-unix": {
+      "command": "mcp-safe-unix",
+      "transport": "stdio"
+    }
+  },
+  "tools": {
+    "ls": {}
+  }
+}

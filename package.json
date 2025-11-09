@@ -1,0 +1,11 @@
+{
+  "name": "safe-unix-mcp",
+  "version": "0.1.0",
+  "description": "Model Context Protocol stdio server exposing SAFE read-only Unix-like tools",
+  "bin": {
+    "mcp-safe-unix": "mcp-safe-unix.js",
+    "setup-safe-unix": "setup-crush.js"
+  },
+  "type": "module",
+  "license": "MIT"
+}
